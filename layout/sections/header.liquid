@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="page-width">
+    <div class="header-inner">
+      <a href="{{ routes.root_url }}" class="site-logo">
+        {{ shop.name }}
+      </a>
+
+      <nav class="site-nav">
+        {% for link in linklists.main-menu.links %}
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+
+      <a href="/pages/enrol" class="button-primary">
+        Book Trial
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": []
+}
+{% endschema %}
